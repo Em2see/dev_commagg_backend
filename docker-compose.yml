@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    command: gunicorn app:app
+    volumes:
+      - .:/code
+    ports:
+      - "80:8000"
